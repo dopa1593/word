@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#python
+origin.csv
+wrong_answer.csv
+
+
