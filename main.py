@@ -219,6 +219,18 @@ def choice_word():
   add_csv('wrong_answer',wrong_answer,count)
   return
 
+def trans():
+  a = open_csv('origin')
+  b = []
+  for i in a:
+    i.reverse()
+    b.append(i)
+  insert_csv('origin', b)
+  if a[0][0] == 'tradition':
+    print("KOR -> ENG")
+  else:
+    print("ENG -> KOR")
+
 while True:
   a = input("입력 : ")
   if a == '종료':
@@ -238,19 +250,12 @@ while True:
       print("취소되었습니다")
   elif a == '객관식연습':
       choice_word()
+  elif a == '한영':
+    trans()
   else:
     print("존재하기 않는 명령어")
 
-# a = open_csv('wrong_answer')
-# b = []
-# for i in a[:5]:
-#   i.reverse()
-#   print(i)
-#   b.append(i)
-# insert_csv('wrong_answer', b)
 
-# a = open_csv('wrong_answer')
 
-# print(a)
 
 
